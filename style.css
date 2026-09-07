@@ -1,0 +1,87 @@
+/* Tambahan di akhir file style.css */
+
+/* Quick Commands */
+.quick-commands {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+    padding: 4px 0;
+}
+
+.cmd-btn {
+    background: #1a1a2a;
+    border: 1px solid #2a2a42;
+    color: #8888bb;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Courier New', monospace;
+}
+
+.cmd-btn:hover {
+    background: #2a2a42;
+    border-color: #5a5aff;
+    color: #c8c8ff;
+    transform: scale(1.02);
+}
+
+.cmd-btn:active {
+    transform: scale(0.95);
+}
+
+/* System message */
+.message.system {
+    align-self: center;
+    background: #1a1a2a;
+    color: #8888bb;
+    border: 1px solid #2a2a42;
+    font-size: 12px;
+    padding: 8px 16px;
+    border-radius: 12px;
+    max-width: 95%;
+    text-align: center;
+}
+
+.message.system .label {
+    color: #666699;
+    font-size: 10px;
+}
+
+/* Code blocks in messages */
+.message .content .deepworm-code {
+    background: #0a0a14;
+    border: 1px solid #2a2a4a;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 8px 0;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: #b8b8e0;
+    white-space: pre-wrap;
+}
+
+.message .content .deepworm-code .keyword {
+    color: #ff6b6b;
+}
+
+.message .content .deepworm-code .string {
+    color: #69db7c;
+}
+
+.message .content .deepworm-code .comment {
+    color: #868e96;
+    font-style: italic;
+}
+
+.message .content .deepworm-code .function {
+    color: #74c0fc;
+}
+
+.message .content .deepworm-code .number {
+    color: #ffd43b;
+}
