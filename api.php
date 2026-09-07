@@ -140,4 +140,16 @@ function callAI($messages, $apiKey, $model) {
     
     if ($httpCode !== 200) {
         $error = $data['error']['message'] ?? 'API error';
-       
+        return ['success' => false, 'error' => $error];
+    }
+    
+    $content = $data['choices'][0]['message']['content'] ?? '';
+    $tokens = $data['usage']['total_tokens'] ?? 0;
+    
+    return [
+        'success' => true,
+        'content' => $content,
+        'tokens' => $tokens
+    ];
+}
+?>
